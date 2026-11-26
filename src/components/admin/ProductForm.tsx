@@ -299,7 +299,7 @@ export function ProductForm({ initialProduct, categories, isEdit = false }: Prod
         {/* Left Column: Core Details & Editorial */}
         <div className="lg:col-span-7 space-y-6 bg-purewhite p-6 sm:p-8 rounded-sm border border-softborder shadow-subtle">
           <h2 className="font-editorial text-xl font-medium text-charcoal pb-2 border-b border-softborder">
-            1. Exact Product Details
+            Exact Product Details
           </h2>
 
           <div>
@@ -358,38 +358,6 @@ export function ProductForm({ initialProduct, categories, isEdit = false }: Prod
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               placeholder="Accurate description of product features, dimensions, material, and packaging..."
-              className="w-full bg-ivory-50 border border-softborder focus:border-charcoal focus:outline-none text-charcoal text-sm p-3 rounded-sm"
-            />
-          </div>
-
-          <h2 className="font-editorial text-xl font-medium text-charcoal pt-4 pb-2 border-b border-softborder">
-            2. Editorial Recommendation
-          </h2>
-
-          <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-1.5">
-              Why We Selected It (Editorial Note) *
-            </label>
-            <textarea
-              required
-              rows={3}
-              value={formData.editorial_note}
-              onChange={(e) => setFormData({ ...formData, editorial_note: e.target.value })}
-              placeholder="Why this product stands out for Indian homes: craftsmanship, utility, durability, aesthetics..."
-              className="w-full bg-ivory-50 border border-softborder focus:border-charcoal focus:outline-none text-charcoal text-sm p-3 rounded-sm"
-            />
-          </div>
-
-          <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-1.5">
-              Best Use Case *
-            </label>
-            <input
-              type="text"
-              required
-              value={formData.best_for}
-              onChange={(e) => setFormData({ ...formData, best_for: e.target.value })}
-              placeholder="e.g. Modular spice drawer organization, narrow kitchen counters"
               className="w-full bg-ivory-50 border border-softborder focus:border-charcoal focus:outline-none text-charcoal text-sm p-3 rounded-sm"
             />
           </div>
@@ -760,13 +728,6 @@ export function ProductForm({ initialProduct, categories, isEdit = false }: Prod
                   <strong className="text-charcoal block mb-0.5">Description:</strong>
                   <p className="text-charcoal/80 line-clamp-3">
                     {formData.description || 'No description provided.'}
-                  </p>
-                </div>
-
-                <div>
-                  <strong className="text-charcoal block mb-0.5">Editorial Note:</strong>
-                  <p className="text-charcoal/80 italic">
-                    &ldquo;{formData.editorial_note || 'No editorial note provided.'}&rdquo;
                   </p>
                 </div>
 
